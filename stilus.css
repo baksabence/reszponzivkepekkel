@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 1000px;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "h"
+    "n"
+    "a"
+    "f";
+    border: 1px solid black;
+}
+
+header {
+    border: 1px solid black;
+    padding: 1px;
+    grid-area: h;
+    margin-top: 1px;
+    margin-bottom: 3px;
+}
+
+nav {
+    grid-area: n;
+    background-color: aqua;
+    padding: 1px;
+}
+
+nav ul {
+    border: 1px solid black;
+    padding: 1px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav a:link {
+    background-color: beige;
+    color:cadetblue;
+}
+
+nav a:visited {
+    background-color: beige;
+    color: cadetblue;
+}
+
+nav a:hover {
+    background-color: beige;
+    color: cadetblue;
+}
+
+nav a:active {
+    background-color: white;
+    color: white;
+}
+
+article {
+    grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "s1"
+    "al"
+    "s2";
+}
+
+#tajkepkezdolap img {
+    width: 100%;
+    padding: 2px;
+    border: 1px solid black;
+    padding: 2px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+#stn2 {
+    border: 1px solid;
+    padding: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+#al {
+    margin: 5px;
+}
+
+#stn2 img {
+    padding: 2px;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        width: 100%;
+    }
+
+    nav ul {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    #stn2 {
+        grid-template-columns: 1fr;
+    }
+  }
